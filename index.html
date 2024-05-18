@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="hero-section">
+    <div class="hero-section">
         <!-- <div class="img">
             <img src="./Media/lapinoz-logo.png" alt="">
         </div> -->
@@ -25,12 +25,49 @@
                 <li><a href="#"><i class="ri-contacts-line"></i> Contact Us</a></li>
             </ul>
         </nav>
-    </header>
 
-    <section class="main-section">
-        <div class="header">
-            <h2>Delivery</h2>
+        <div class="hero">
+            <div class="header">
+                <p><i class="ri-truck-line"></i> Delivery</p>
+                <p><i class="ri-printer-cloud-line"></i> Pick up</p>
+            </div>
+            <div class="sec">
+                <h2>Lets Get Ordering On La Pino'z Pizza</h2>
+                <h1>Select Your Nearest Outlet</h1>
+            </div>
+            <div class="btn">
+                <ul class="btns">
+                    <li><a href="#" class="bttn"><i class="ri-map-pin-line"></i> Use my current location</a></li>
+                    <li class="class-move-two">
+
+                    </li>
+                    <li>
+                        <p class="custom-class">OR</p>
+                    </li>
+                    <li>
+                        <div class="outlet-div">
+                            <select id="citySelector" onchange="showOutletNew(this,5)" class="browser-default custom-select">
+                            <option value="" selected="">Select City</option><option value="Abohar">Abohar</option><option value="Agra">Agra</option><option value="Ahmedabad">Ahmedabad</option><option value="Ajmer">Ajmer</option><option value="Alwar">Alwar</option><option value="Ambala">Ambala</option><option value="Amreli">Amreli</option><option value="Amritsar">Amritsar</option><option value="Anand">Anand</option><option value="Ankleshwar">Ankleshwar</option><option value="Aurangabad">Aurangabad</option><option value="Ayodhya">Ayodhya</option><option value="Azamgarh">Azamgarh</option><option value="Baddi">Baddi</option><option value="Bahadurgarh">Bahadurgarh</option><option value="Barabanki">Barabanki</option><option value="Bareilly">Bareilly</option><option value="Basti">Basti</option><option value="Batala">Batala</option><option value="Bathinda">Bathinda</option><option value="Beawar">Beawar</option><option value="Bengaluru">Bengaluru</option><option value="Bettiah">Bettiah</option><option value="Bhagalpur">Bhagalpur</option><option value="Bharuch">Bharuch</option><option value="Bhavnagar">Bhavnagar</option><option value="Bhilai">Bhilai</option><option value="Bhilwara">Bhilwara</option><option value="Bhopal">Bhopal</option><option value="Bhubaneswar">Bhubaneswar</option><option value="Bhuj">Bhuj</option><option value="Bikaner">Bikaner</option><option value="Bilimora">Bilimora</option><option value="Bokaro">Bokaro</option><option value="Borsad">Borsad</option><option value="Botad">Botad</option><option value="Budaun">Budaun</option><option value="Chandigarh">Chandigarh</option><option value="Chennai">Chennai</option><option value="Chikhli">Chikhli</option><option value="Dahod">Dahod</option><option value="Daman">Daman</option><option value="Dang">Dang</option><option value="Deesa">Deesa</option><option value="Dehradun">Dehradun</option><option value="Dehri">Dehri</option><option value="Delhi">Delhi</option><option value="Deoria">Deoria</option><option value="Derabassi">Derabassi</option><option value="DHARAMSHALA">DHARAMSHALA</option><option value="Durgapur">Durgapur</option><option value="Dwarka Gujarat">Dwarka Gujarat</option><option value="Faridabad">Faridabad</option><option value="Fatehgarh Sahib">Fatehgarh Sahib</option><option value="Firozpur">Firozpur</option><option value="Gandhidham">Gandhidham</option><option value="Gandhinagar">Gandhinagar</option><option value="Gangtok">Gangtok</option><option value="Gaya">Gaya</option><option value="Ghaziabad">Ghaziabad</option><option value="Goa">Goa</option><option value="Godhra">Godhra</option><option value="Gonda">Gonda</option><option value="Gondal">Gondal</option><option value="Gondia">Gondia</option><option value="Gorakhpur">Gorakhpur</option><option value="Greater Noida">Greater Noida</option><option value="Guntur">Guntur</option><option value="Gurgaon">Gurgaon</option><option value="Guwahati">Guwahati</option><option value="Gwalior">Gwalior</option><option value="Haldwani">Haldwani</option><option value="Halol">Halol</option><option value="Halvad">Halvad</option><option value="Himatnagar">Himatnagar</option><option value="Hisar">Hisar</option><option value="Hoshiarpur">Hoshiarpur</option><option value="Howrah">Howrah</option><option value="Hyderabad">Hyderabad</option><option value="Indore">Indore</option><option value="Jabalpur">Jabalpur</option><option value="Jagraon">Jagraon</option><option value="Jaipur">Jaipur</option><option value="Jalandhar">Jalandhar</option><option value="jalandhar">jalandhar</option><option value="Jalgaon">Jalgaon</option><option value="Jammu">Jammu</option><option value="Jamnagar">Jamnagar</option><option value="Jamshedpur">Jamshedpur</option><option value="Jassur">Jassur</option><option value="Jaunpur">Jaunpur</option><option value="Jhansi">Jhansi</option><option value="Jodhpur">Jodhpur</option><option value="Junagadh">Junagadh</option><option value="Kakinada">Kakinada</option><option value="kandeli">kandeli</option><option value="Kanpur">Kanpur</option><option value="Karnal">Karnal</option><option value="Kasol">Kasol</option><option value="Kathua">Kathua</option><option value="Kevadiya">Kevadiya</option><option value="Khanna">Khanna</option><option value="Kishangarh">Kishangarh</option><option value="Kochi">Kochi</option><option value="Kolkata">Kolkata</option><option value="Kollam">Kollam</option><option value="Kota">Kota</option><option value="Kurali">Kurali</option><option value="Lucknow">Lucknow</option><option value="Ludhiana">Ludhiana</option><option value="Maharajganj">Maharajganj</option><option value="Malout">Malout</option><option value="Manali">Manali</option><option value="Mandi">Mandi</option><option value="Mandi Gobindgarh">Mandi Gobindgarh</option><option value="Mangalore">Mangalore</option><option value="Meerut">Meerut</option><option value="Mehsana">Mehsana</option><option value="Mhow">Mhow</option><option value="Modasa">Modasa</option><option value="Moga">Moga</option><option value="Mohali">Mohali</option><option value="Moradabad">Moradabad</option><option value="Morbi">Morbi</option><option value="Mount Abu">Mount Abu</option><option value="Muktsar">Muktsar</option><option value="Mumbai">Mumbai</option><option value="Muzaffarpur">Muzaffarpur</option><option value="Nabha">Nabha</option><option value="Nadiad">Nadiad</option><option value="Nagpur">Nagpur</option><option value="Nashik">Nashik</option><option value="Nathdwara">Nathdwara</option><option value="Navi Mumbai">Navi Mumbai</option><option value="Navsari">Navsari</option><option value="Nawanshahr">Nawanshahr</option><option value="Noida">Noida</option><option value="Palanpur">Palanpur</option><option value="Pali">Pali</option><option value="Panchkula">Panchkula</option><option value="Panipat">Panipat</option><option value="Patan">Patan</option><option value="Pathankot">Pathankot</option><option value="Patiala">Patiala</option><option value="Patna">Patna</option><option value="perambalur">perambalur</option><option value="Petlad">Petlad</option><option value="Porbandar">Porbandar</option><option value="Prayagraj">Prayagraj</option><option value="Puducherry">Puducherry</option><option value="Pune">Pune</option><option value="Raebareli">Raebareli</option><option value="Raipur">Raipur</option><option value="Rajkot">Rajkot</option><option value="Rajpura">Rajpura</option><option value="Ranaghat">Ranaghat</option><option value="Ranchi">Ranchi</option><option value="Ratlam">Ratlam</option><option value="Rewa">Rewa</option><option value="Rourkela">Rourkela</option><option value="Rudrapur">Rudrapur</option><option value="Sagar">Sagar</option><option value="Saharanpur">Saharanpur</option><option value="Sangrur">Sangrur</option><option value="Sasaram">Sasaram</option><option value="Satna">Satna</option><option value="Secunderabad">Secunderabad</option><option value="Shirdi">Shirdi</option><option value="Sikar">Sikar</option><option value="Siliguri">Siliguri</option><option value="Silvassa">Silvassa</option><option value="Singrauli">Singrauli</option><option value="Sirhind">Sirhind</option><option value="Sirsi">Sirsi</option><option value="Sitapur">Sitapur</option><option value="Solan">Solan</option><option value="Solapur">Solapur</option><option value="Sri Ganganagar">Sri Ganganagar</option><option value="Sultanpur">Sultanpur</option><option value="Surat">Surat</option><option value="Surendranagar">Surendranagar</option><option value="Tarn Taran">Tarn Taran</option><option value="Thane">Thane</option><option value="Tumakuru">Tumakuru</option><option value="Udaipur">Udaipur</option><option value="Ujjain">Ujjain</option><option value="Una">Una</option><option value="Upleta">Upleta</option><option value="Vadodara">Vadodara</option><option value="Valsad">Valsad</option><option value="Vapi">Vapi</option><option value="Varanasi">Varanasi</option><option value="Veraval">Veraval</option><option value="Vijayawada">Vijayawada</option><option value="Vyara">Vyara</option><option value="Yamuna Nagar">Yamuna Nagar</option><option value="Zirakpur">Zirakpur</option></select>
+                            <select class="browser-default custom-select disabled" id="outletSelector" onchange="openDeliveryOrderPage(this)">
+                            <option value="" selected="" disabled="" hidden="">Select Outlet</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
+
+
+    <section class="deals-section">
+        <h1>Deals and Offers</h1>
+        <article>
+            <img class="active" src="./Media/Offer1.jpeg" alt="">
+            <img src="./Media/Offer2.jpeg" alt="">
+            <img src="./Media/Offer3.jpeg" alt="">
+            <img src="./Media/Offer4.jpeg" alt="">
+            <img src="./Media/Offer5.jpeg" alt="">
+        </article>
     </section>
 
     <script href="./script.js"></script>

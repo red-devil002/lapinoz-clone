@@ -1,0 +1,59 @@
+/* Reset styles for a cleaner base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto; /* Center accordion horizontally */
+  }
+  
+  .accordion-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    position: relative; /* Needed for icon positioning */
+  }
+  
+  .accordion-item.active .content {
+    display: block;
+  }
+  
+  .content {
+    display: none; /* Initially hide content */
+    padding: 10px;
+  }
+  
+  .content h2 {
+    margin-bottom: 5px;
+  }
+  
+  .accordion-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center icon vertically */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .accordion-item.active .icon {
+    transform: translateY(-50%) rotate(90deg); /* Rotate icon on open */
+  }
+  
