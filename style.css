@@ -33,11 +33,6 @@ nav {
     height: 40px;
 }
 
-img {
-    height: 140px;
-    position: fixed;
-}
-
 nav a {
     color: #000;
     text-decoration: none;
