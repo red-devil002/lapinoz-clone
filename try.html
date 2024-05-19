@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Flip Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css"
+    />
+    <style>
+      .root {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .container {
+        height: 320px;
+        margin: 0px;
+        background-image: url(./public/images/lapinoz-background.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        perspective: 1500px; /* Add perspective to container */
+      }
+
+      .box {
+        height: 250px;
+        width: 720px;
+        padding-inline: 10px;
+        border-radius: 10px;
+        position: absolute;
+        cursor: pointer;
+        transform-style: preserve-3d; /* Ensure 3D transforms are maintained */
+      }
+
+      .delivrySection {
+        background-color: rgb(255, 231, 122,0.7);
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        z-index: 20;
+      }
+
+      .header {
+        height: 40px;
+        width: 150px;
+        font-size: x-large;
+        font-weight: bold;
+        display: flex;
+        border-bottom: 2px solid black;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .header i {
+        font-weight: lighter
+      }
+
+      .textArea {
+        height: 70px;
+        width: 500px;
+        font-size: larger;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .textArea p {
+        height: 40px;
+        font-size: larger;
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      .SelectButtons {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        justify-content: space-between;
+      }
+
+      .SelectButtons p {
+        width: 50px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      
+      #locationButton {
+        height: 50px;
+        width: 230px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f7f7f7;
+        background-color: #556b2f;
+      }
+
+      #selectlocation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .SelectButtons select {
+        height: 50px;
+        padding-inline: 10px;
+        font-size: large;
+        background-color: rgb(255, 99, 71); 
+        color: #f7f7f7; 
+      }
+
+      #leftSelect {
+        border-radius: 5px 0 0 5px;
+      }
+
+      #rightSelect {
+        border-radius: 0 5px 5px 0;
+      }
+
+      
+      @media (max-width: 767px) {
+        .box {
+          width: 90%;
+          height: 300px;
+          justify-content: unset;
+          gap: 10px;
+        }
+        .SelectButtons {
+          height: 150px;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          font-size: large;
+          flex-direction: column;
+        }
+        .SelectButtons p {
+          height: 0px;
+        }
+        .SelectButtons select {
+          font-size:medium;
+        }
+      }
+
+      @media (max-width: 557px) {
+        .SelectButtons select {
+          width: 140px;
+        }
+        .textArea {
+          width: 90%;
+          font-size: large;
+        }
+      }
+
+      @media (max-width: 466px) {
+        .textArea {
+          font-size:small;
+        }
+        .SelectButtons {
+          font-size: medium;
+        }
+        .SelectButtons select{        
+          font-size:small;
+          padding-inline: 0px;
+        }
+      }
+
+      .PickUp {
+        background-color: rgb(255, 99, 71,0.7);
+        z-index: 10;
+        visibility: hidden; /* Initially hide the bottom div */
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="box delivrySection">
+        <div class="header">
+          <i class="ri-riding-line"></i>
+          <p style="color: #556b2f">Delivery</p>
+        </div>
+        <div class="textArea">
+          <p style="color: #556b2f">Let's Get Ordering On La Pino'z Pizza</p>
+          <p style="color: black">Select Your Nearest Outlet</p>
+        </div>
+        <div class="SelectButtons">
+          <div id="locationButton">
+            <i class="ri-map-pin-line"></i>
+            Use my current location
+          </div>
+          <p>OR</p>
+          <div id="selectlocation">
+            <select id="leftSelect">
+              <option value="" selected disabled>Select City</option>
+            </select>
+            <select id="rightSelect">
+              <option value="" selected disabled>Select Outlet</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="box PickUp">
+        <div class="header">
+          
+          <p style="color: #556b2f">Pickup Order</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const deliverySection = document.querySelector(".delivrySection");
+        const pickUpSection = document.querySelector(".PickUp");
+
+        let isDeliveryOnTop = true;
+
+        function flipSections() {
+          const tl = gsap.timeline();
+
+          if (isDeliveryOnTop) {
+            tl.to(deliverySection, {
+              duration: 1,
+              rotationY: -77,
+              transformOrigin: "left center",
+              zIndex: 10,
+              onComplete: () => {
+                deliverySection.style.visibility = "hidden";
+              },
+            })
+              .set(pickUpSection, {
+                rotationY: 77,
+                transformOrigin: "left center",
+                zIndex: 20,
+                visibility: "visible",
+              })
+              .to(pickUpSection, {
+                duration: 0.5,
+                rotationY: 0,
+                transformOrigin: "left center",
+              });
+          } else {
+            tl.to(pickUpSection, {
+              duration: 1,
+              rotationY: -77,
+              transformOrigin: "left center",
+              zIndex: 10,
+              onComplete: () => {
+                pickUpSection.style.visibility = "hidden";
+              },
+            })
+              .set(deliverySection, {
+                rotationY: 77,
+                transformOrigin: "left center",
+                zIndex: 20,
+                visibility: "visible",
+              })
+              .to(deliverySection, {
+                duration: 0.5,
+                rotationY: 0,
+                transformOrigin: "left center",
+              });
+          }
+
+          isDeliveryOnTop = !isDeliveryOnTop;
+        }
+
+        pickUpSection.addEventListener("click", flipSections);
+        deliverySection.addEventListener("click", flipSections);
+      });
+    </script>
+  </body>
+</html>

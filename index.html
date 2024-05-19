@@ -1,32 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header class="hero-section">
-        <!-- <div class="img">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="hero-section">
+      <!-- <div class="img">
             <img src="./Media/lapinoz-logo.png" alt="">
         </div> -->
-        <nav>
-            <ul>
-                <li><a class="active" href="#"><i class="ri-home-2-line"></i> Home</a></li>
-                <li><a href="#"><i class="ri-order-play-line"></i> Order online</a></li>
-                <li><a href="#"><i class="ri-map-pin-line"></i> Store Locator</a></li>
-                <li><a href="#"><i class="ri-customer-service-line"></i> Franchise Enquiry</a></li>
-                <li><a href="#"><i class="ri-hourglass-2-line"></i> Our Story</a></li>
-                <li><a href="#"><i class="ri-contacts-line"></i> Contact Us</a></li>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="#"
+              ><i class="fa-solid fa-people-carry-box"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="ri-order-play-line"></i> Order online</a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-map-pin-line"></i> Store Locator</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="ri-customer-service-line"></i> Franchise Enquiry</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="ri-hourglass-2-line"></i> Our Story</a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-contacts-line"></i> Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <div class="header">
+          <p><i class="fa-solid fa-person-biking"></i> Delivery</p>
+          <p><i class="fa-solid fa-people-carry-box"></i> Pick up</p>
+        </div>
+        <div class="sec">
+          <h2>Lets Get Ordering On La Pino'z Pizza</h2>
+          <h1>Select Your Nearest Outlet</h1>
+        </div>
+        <div class="btn">
+          <ul class="btns">
+            <li>
+              <a href="#" class="bttn"
+                ><i class="ri-map-pin-line"></i> Use my current location</a
+              >
+            </li>
+            <li class="class-move-two"></li>
+            <li>
+              <p class="custom-class">OR</p>
+            </li>
+            <li>
+              <div class="outlet-div">
+                <select
+                  id="citySelector"
+                  onchange="showOutletNew(this,5)"
+                  class="browser-default custom-select"
+                >
+                  <option value="" selected="">Select City</option>
+                  <option value="Abohar">Abohar</option>
+                </select>
+                <select
+                  class="browser-default custom-select disabled"
+                  id="outletSelector"
+                  onchange="openDeliveryOrderPage(this)"
+                >
+                  <option value="" selected="" disabled="" hidden="">
+                    Select Outlet
+                  </option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="deals-section">
+      <h1>Deals and Offers</h1>
+      <article>
+        <img class="active" src="./Media/Offer1.jpeg" alt="" />
+        <img src="./Media/Offer2.jpeg" alt="" />
+        <img src="./Media/Offer3.jpeg" alt="" />
+        <img src="./Media/Offer4.jpeg" alt="" />
+        <img src="./Media/Offer5.jpeg" alt="" />
+      </article>
+    </section>
+
+    <section class="story">
+      <div class="story-content">
+        <div class="story-content-upper">
+          <h5>About Us</h5>
+          <p>The Story of La Pino'z Pizza</p>
+          <hr />
+        </div>
+        <div class="story-content-lower">
+          <p>
+            The story of India's fastest growing pizza place started back in
+            2011 when Sanam Kapoor opened his very first pizzeria in his
+            hometown Chandigarh. Inspired by his own search for delicious pizza
+            options, he started to wonder if there was a better way of doing
+            pizza – and business. The last thing the world needed was another
+            pizzeria, but maybe this one could be different and everyone could
+            get exactly what they wanted, made fresh on demand. It all started
+            sounding pretty great, and soon Sanam was opening the first La
+            Pino'z in his hometown Chandigarh and there was no looking back. As
+            of today, La Pino'z has 600+ outlets across India with the recent
+            one opening in London.
+          </p>
+        </div>
+      </div>
+      <div class="story-content">
+        <div class="owner">
+          <img
+            class="owner-img"
+            src="./public/images/sanam-kapoor.jpg"
+            alt="Owner"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="single-banner">
+      <div class="single-banner-container">
+        <picture>
+          <!-- <source srcset="https://static.uengage.in/uploads/5/image-495312-1709794368.jpeg"
+                    media="(min-width: 768px)">
+                    <img srcset="https://static.uengage.in/uploads/5/image-955349-1709794368.jpeg"
+                    alt="Placeholder Image"> -->
+          <a href="https://lordpetrickindia.com/franchise-enquiry">
+            <img
+              class="franchise-Image"
+              src="./public/images/Franchise_inquiry.jpeg"
+              alt="Franchise"
+            />
+          </a>
+        </picture>
+      </div>
+    </section>
+    <style>
+      .single-banner,
+      .single-banner-container {
+        width: 100%;
+        height: 15rem;
+        display: flex;
+      }
+
+      picture {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+      }
+
+      picture > a {
+        display: flex;
+        width: 98%;
+        height: 100%;
+        margin: auto;
+      }
+
+      picture > a > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 6%;
+      }
+    </style>
+    <section class="common-spacing bg-color pb-0 pb-md-3 colored">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h3 class="common-heading semibold text-center text-md-left">
+              <div style="color: var(--main-bg-color); display: inline-block">
+                La Pino'z Pizza
+              </div>
+              Growth Journey
+            </h3>
+
+            <ul class="timeline-ul" style="margin-top: 2rem !important">
+              <li>
+                <div>
+                  <h4 class="mb-0">2011</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-one.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    Launched the 1st Outlet in Chandigarh
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4 class="mb-0">2013</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-two.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    Launched the 1st Franchise Outlet
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4 class="mb-0">2017</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-three.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    Crossed 100 Outlets All Over India
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4 class="mb-0">2019</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-four.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    Crossed 200 Outlets All Over India
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4 class="mb-0">2021</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-five.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    Crossed 300 Outlets All Over India
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4 class="mb-0">2022</h4>
+                </div>
+                <div>
+                  <img
+                    src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/timeline-six.svg"
+                    alt="Timeline One"
+                    width="25"
+                    height="25"
+                  />
+                </div>
+                <div class="position-relative">
+                  <div class="timeline-circle"></div>
+                  <p class="common-para mb-0 bg-para">
+                    La Pino’z Goes International
+                  </p>
+                </div>
+              </li>
             </ul>
-        </nav>
-    </header>
+          </div>
+          <div class="col-md-6">
+            <div class="about-img about-img-two">
+              <img
+                src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/lapinonz-pizza-round-image.png"
+                alt="Lapinonz Pizza Round Image"
+                id="js-logo"
+                width="536"
+                height="536"
+                style="transform: rotate(0.437455rad)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .common-spacing {
+        margin-top: 50px;
+        padding: 30px 0;
+      }
+      .colored {
+        background-color: #f2f2f2;
+      }
+      @media (min-width: 768px) {
+        .pb-md-3,
+        .py-md-3 {
+          padding-bottom: 1rem !important;
+        }
+      }
+      .container {
+        max-width: 1250px;
+      }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+      }
+      @media (min-width: 1200px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+          max-width: 1140px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container,
+        .container-md,
+        .container-sm {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 576px) {
+        .container,
+        .container-sm {
+          max-width: 540px;
+        }
+      }
+      .container,
+      .container-fluid,
+      .container-lg,
+      .container-md,
+      .container-sm,
+      .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .align-items-center {
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      @media (min-width: 768px) {
+        .col-md-6 {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+      .common-heading {
+        font-size: 26px;
+        font-weight: 600;
+      }
+      @media (min-width: 768px) {
+        .text-md-left {
+          text-align: left !important;
+        }
+      }
+      element.style {
+        margin-top: 2rem !important;
+      }
+      .timeline-ul {
+        position: relative;
+      }
+      .timeline-ul li {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+        position: relative;
+      }
+      .timeline-ul li > div:first-child {
+        margin-left: 0px;
+        width: 100%;
+        max-width: 40px;
+      }
+      .timeline-ul li > div {
+        margin: 0 10px;
+      }
+      .timeline-ul h4 {
+        font-size: 20px;
+      }
+      .mb-0,
+      .my-0 {
+        margin-bottom: 0 !important;
+      }
+      .timeline-ul li > div:nth-child(2) {
+        width: 100%;
+        max-width: 50px;
+        text-align: center;
+      }
+      .timeline-ul li > div {
+        margin: 0 10px;
+      }
+      .timeline-ul img {
+        width: 100%;
+        max-width: 40px;
+        z-index: 1;
+        position: relative;
+      }
+      img {
+        height: auto;
+        /* max-width: 100%; */
+        display: inline-block;
+      }
+      img {
+        vertical-align: middle;
+        border-style: none;
+      }
+      .timeline-ul li > div:last-child {
+        margin-right: 0px;
+        width: 100%;
+        max-width: 329px;
+      }
+      .timeline-ul li > div {
+        margin: 0 10px;
+      }
+      .position-relative {
+        position: relative !important;
+      }
+      .timeline-circle {
+        background: #fff;
+      }
+      .timeline-circle {
+        position: absolute;
+        top: 22px;
+        left: -5px;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #16a850, inset 0 2px 0 rgb(0 0 0 / 8%),
+          0 2px 0 2px rgb(0 0 0 / 5%);
+      }
+      .timeline-ul li .common-para {
+        font-weight: 600;
+        background-color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        position: relative;
+      }
+      .common-para {
+        /* margin-bottom: 5px; */
+        font-size: 15px;
+      }
+      .common-para {
+        /* font-size: 15px; */
+        /* font-weight: 500; */
+        color: #201c1d;
+      }
+      .mb-0,
+      .my-0 {
+        margin-bottom: 0 !important;
+      }
+      .timeline-ul li .common-para::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 0.5rem solid transparent;
+        border-right: 0.5rem solid #fff;
+      }
+      @media (min-width: 768px) {
+        .col-md-6 {
+          /* -ms-flex: 0 0 50%; */
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+      .col,
+      .col-1,
+      .col-10,
+      .col-11,
+      .col-12,
+      .col-2,
+      .col-3,
+      .col-4,
+      .col-5,
+      .col-6,
+      .col-7,
+      .col-8,
+      .col-9,
+      .col-auto,
+      .col-lg,
+      .col-lg-1,
+      .col-lg-10,
+      .col-lg-11,
+      .col-lg-12,
+      .col-lg-2,
+      .col-lg-3,
+      .col-lg-4,
+      .col-lg-5,
+      .col-lg-6,
+      .col-lg-7,
+      .col-lg-8,
+      .col-lg-9,
+      .col-lg-auto,
+      .col-md,
+      .col-md-1,
+      .col-md-10,
+      .col-md-11,
+      .col-md-12,
+      .col-md-2,
+      .col-md-3,
+      .col-md-4,
+      .col-md-5,
+      .col-md-6,
+      .col-md-7,
+      .col-md-8,
+      .col-md-9,
+      .col-md-auto,
+      .col-sm,
+      .col-sm-1,
+      .col-sm-10,
+      .col-sm-11,
+      .col-sm-12,
+      .col-sm-2,
+      .col-sm-3,
+      .col-sm-4,
+      .col-sm-5,
+      .col-sm-6,
+      .col-sm-7,
+      .col-sm-8,
+      .col-sm-9,
+      .col-sm-auto,
+      .col-xl,
+      .col-xl-1,
+      .col-xl-10,
+      .col-xl-11,
+      .col-xl-12,
+      .col-xl-2,
+      .col-xl-3,
+      .col-xl-4,
+      .col-xl-5,
+      .col-xl-6,
+      .col-xl-7,
+      .col-xl-8,
+      .col-xl-9,
+      .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    </style>
 
     <script href="./script.js"></script>
-</body>
+  </body>
 </html>
