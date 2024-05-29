@@ -259,6 +259,7 @@ article img {
     /* Adjust height as needed */
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -304,8 +305,14 @@ article img {
 
 .story>.story-content>.owner>.owner-img {
     position: relative;
-    height: 28rem;
-    width: 28rem;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     margin: auto;
+}
+
+@media (min-width: 768px) {
+    .story {
+        flex-direction: row;
+    }
 }
