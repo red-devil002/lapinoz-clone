@@ -47,7 +47,7 @@
                         <p class="custom-class">OR</p>
                     </li>
                     <li>
-                        <div class="outlet-div">
+                        <!-- <div class="outlet-div">
                             <select id="citySelector" onchange="showOutletNew(this,5)"
                                 class="browser-default custom-select">
                                 <option value="" selected="">Select City</option>
@@ -58,7 +58,7 @@
                                 onchange="openDeliveryOrderPage(this)">
                                 <option value="" selected="" disabled="" hidden="">Select Outlet</option>
                             </select>
-                        </div>
+                        </div> -->
                     </li>
                 </ul>
             </div>
@@ -106,10 +106,6 @@
     <section class="single-banner">
         <div class="single-banner-container">
             <picture>
-                <!-- <source srcset="https://static.uengage.in/uploads/5/image-495312-1709794368.jpeg"
-                    media="(min-width: 768px)">
-                    <img srcset="https://static.uengage.in/uploads/5/image-955349-1709794368.jpeg"
-                    alt="Placeholder Image"> -->
                 <a href="https://lordpetrickindia.com/franchise-enquiry">
                     <img class="franchise-Image" src="./Media/Franchise_inquiry.jpeg" alt="Franchise">
                 </a>
@@ -450,47 +446,31 @@
         }
     </style>
 
-    <!-- Quality Section
-    <section class="cta-section position-relative">
-        <div class="container">
-            <h3 class="common-heading semibold text-center text-white">
+    <!-- Quality Section -->
+    <section class="quality-section">
+        <div class="quality-container">
+            <h3 class="quality-container-heading">
                 Quality Assured
             </h3>
-            <div class="bottom-dots clearfix d-flex justify-content-center mb-2 mb-md-4">
-                <span class="dot line-dot" style="border-color: #fff"></span>
-                <span class="dot" style="border-color: #fff"></span>
-                <span class="dot" style="border-color: #fff"></span>
-                <span class="dot" style="border-color: #fff"></span>
+            <div class="bottom-dots">
+                <span class="dot line-dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
 
     <style>
-        .cta-section {
+        .quality-section {
+            position: relative;
             background-image: url(https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/usp-banner.jpg);
             padding: 30px 0 140px;
             background-size: cover;
             background-position: center;
         }
 
-        .position-relative {
-            position: relative !important;
-        }
-
-        article,
-        aside,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        main,
-        nav,
-        section {
-            display: block;
-        }
-
-        .cta-section:before {
+        .quality-section:before {
             content: "";
             position: absolute;
             background-color: rgb(0, 0, 0, 0.3);
@@ -502,69 +482,72 @@
             bottom: 0px;
         }
 
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
-
-        .cta-section .container {
+        .quality-container {
             position: relative;
-        }
-
-        .container {
             max-width: 1250px;
+            width: 100%;
         }
 
-        .container {
-            width: 100%;
-            /* max-width: 1200px; */
+        .quality-container-heading {
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .bottom-dots {
+            justify-content: center;
+            display: flex;
+        }
+
+        .bottom-dots .dot.line-dot,
+        .heading-dots .h-dot.line-dot {
+            border-right: 40px solid white;
+        }
+
+        .bottom-dots .dot {
+            position: relative;
+            display: block;
+            float: left;
+            width: 3px;
+            height: 2px;
+            border-right: 3px solid white;
+            margin-right: 3px;
         }
 
         @media (min-width: 1200px) {
 
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm,
-            .container-xl {
+            .quality-container {
                 max-width: 1140px;
             }
         }
 
         @media (min-width: 992px) {
 
-            .container,
-            .container-lg,
-            .container-md,
-            .container-sm {
+            .quality-container {
                 max-width: 960px;
             }
         }
 
         @media (min-width: 768px) {
+            .bottom-dots {
+                margin-bottom: 1.5rem;
+            }
 
-            .container,
-            .container-md,
-            .container-sm {
+            .quality-container {
                 max-width: 720px;
             }
         }
 
         @media (min-width: 576px) {
 
-            .container,
-            .container-sm {
+            .quality-container {
                 max-width: 540px;
             }
         }
 
-        .container,
-        .container-fluid,
-        .container-lg,
-        .container-md,
-        .container-sm,
-        .container-xl {
+        .quality-container {
             width: 100%;
             padding-right: 15px;
             padding-left: 15px;
@@ -577,111 +560,18 @@
             font-weight: 600;
         }
 
-        .text-white {
-            color: #fff !important;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            clear: both;
-            margin: 0 0 0.5407911001em;
-        }
-
-        .h1,
-        .h2,
-        .h3,
-        .h4,
-        .h5,
-        .h6,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            line-height: 1.2;
-        }
-
-        @media (min-width: 768px) {
-
-            .mb-md-4,
-            .my-md-4 {
-                margin-bottom: 1.5rem !important;
-            }
-        }
-
-        .justify-content-center {
-            justify-content: center !important;
-        }
-
-        .d-flex {
-            display: flex !important;
-        }
-
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
-
-        user agent stylesheet div {
-            unicode-bidi: isolate;
-        }
-
-        .dot {
-            border-color: #fff;
-        }
-
-        .bottom-dots .dot.line-dot {
-            color: var(--main-bg-color);
-        }
-
-        .bottom-dots .dot {
-            position: relative;
-            display: block;
-            float: left;
-            width: 3px;
-            height: 2px;
-            margin-right: 3px;
-        }
-
-        element.style {
-            border-color: #fff;
-        }
-
-        .bottom-dots .dot,
-        .heading-dots .h-dot {
-            border-right: 3px solid var(--main-bg-color);
-        }
-
-        .bottom-dots .dot {
-            position: relative;
-            display: block;
-            float: left;
-            width: 3px;
-            height: 2px;
-            margin-right: 3px;
-        }
-
         .clearfix::after {
             display: block;
             clear: both;
             content: "";
         }
     </style>
-    <section class="outer-card-dv pb-3">
+
+    <section class="outer-card-dv">
         <div class="container">
             <div class="three-cards">
-                <div class="row m-0">
-                    <div class="col-md-4 three-cards-inner text-center text-left">
+                <div class="three-cards-container">
+                    <div class="three-cards-inner ">
                         <div class="icons">
                             <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/ingrediants.svg"
                                 class="img-responsive" alt="Ingrediants" />
@@ -692,7 +582,7 @@
                             authentic Italian taste, every single time.
                         </p>
                     </div>
-                    <div class="col-md-4 three-cards-inner text-center text-left">
+                    <div class="col-md-4 three-cards-inner">
                         <div class="icons">
                             <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/fresh-dough.svg"
                                 class="img-responsive" alt="Fresh Dough" />
@@ -703,7 +593,7 @@
                             is always hot and fresh.
                         </p>
                     </div>
-                    <div class="col-md-4 three-cards-inner text-center text-left">
+                    <div class="col-md-4 three-cards-inner ">
                         <div class="icons">
                             <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/safety-and-quality.svg"
                                 class="img-responsive" alt="Safety And Quality" />
@@ -722,74 +612,13 @@
         .outer-card-dv {
             position: relative;
             margin-top: -125px;
-        }
-
-        .pb-3,
-        .py-3 {
-            padding-bottom: 1rem !important;
-        }
-
-        article,
-        aside,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        main,
-        nav,
-        section {
+            padding-bottom: 1rem;
             display: block;
         }
 
-        section {
-            unicode-bidi: isolate;
-        }
-
-        .container {
+        .outer-card-dv>.container {
             max-width: 1250px;
-        }
-
-        .container {
             width: 100%;
-        }
-
-        /* @media (min-width: 1200px) {
-        .container,
-        .container-lg,
-        .container-md,
-        .container-sm,
-        .container-xl {
-          max-width: 1140px;
-        }
-      }
-      @media (min-width: 992px) {
-        .container,
-        .container-lg,
-        .container-md,
-        .container-sm {
-          max-width: 960px;
-        }
-      }
-      @media (min-width: 768px) {
-        .container,
-        .container-md,
-        .container-sm {
-          max-width: 720px;
-        }
-      } */
-        /* @media (min-width: 576px) {
-        .container,
-        .container-sm {
-          max-width: 540px;
-        }
-      } */
-        .container,
-        .container-fluid,
-        .container-lg,
-        .container-md,
-        .container-sm,
-        .container-xl {
             padding-right: 15px;
             padding-left: 15px;
             margin-right: auto;
@@ -798,302 +627,72 @@
 
         .three-cards {
             background-color: #fff;
+            width: 100%;
             padding: 0px 20px;
             border-radius: 5px;
             position: relative;
             box-shadow: 0px 4px 7px rgb(0 0 0 / 10%);
         }
 
-        .m-0 {
-            margin: 0 !important;
-        }
-
-        .row {
+        .three-cards-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
 
         .three-cards-inner {
             padding: 20px 15px;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        @media (min-width: 768px) {
-            .col-md-4 {
-                -ms-flex: 0 0 33.333333%;
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%;
-            }
-        }
-
-        .col,
-        .col-1,
-        .col-10,
-        .col-11,
-        .col-12,
-        .col-2,
-        .col-3,
-        .col-4,
-        .col-5,
-        .col-6,
-        .col-7,
-        .col-8,
-        .col-9,
-        .col-auto,
-        .col-lg,
-        .col-lg-1,
-        .col-lg-10,
-        .col-lg-11,
-        .col-lg-12,
-        .col-lg-2,
-        .col-lg-3,
-        .col-lg-4,
-        .col-lg-5,
-        .col-lg-6,
-        .col-lg-7,
-        .col-lg-8,
-        .col-lg-9,
-        .col-lg-auto,
-        .col-md,
-        .col-md-1,
-        .col-md-10,
-        .col-md-11,
-        .col-md-12,
-        .col-md-2,
-        .col-md-3,
-        .col-md-4,
-        .col-md-5,
-        .col-md-6,
-        .col-md-7,
-        .col-md-8,
-        .col-md-9,
-        .col-md-auto,
-        .col-sm,
-        .col-sm-1,
-        .col-sm-10,
-        .col-sm-11,
-        .col-sm-12,
-        .col-sm-2,
-        .col-sm-3,
-        .col-sm-4,
-        .col-sm-5,
-        .col-sm-6,
-        .col-sm-7,
-        .col-sm-8,
-        .col-sm-9,
-        .col-sm-auto,
-        .col-xl,
-        .col-xl-1,
-        .col-xl-10,
-        .col-xl-11,
-        .col-xl-12,
-        .col-xl-2,
-        .col-xl-3,
-        .col-xl-4,
-        .col-xl-5,
-        .col-xl-6,
-        .col-xl-7,
-        .col-xl-8,
-        .col-xl-9,
-        .col-xl-auto {
+            text-align: center;
             position: relative;
             width: 100%;
+
         }
 
-        .icons .img-responsive {
+        .icons>.img-responsive {
             width: 100%;
             max-width: 65px;
             margin-bottom: 15px;
-            vertical-align: middle;
-            border-style: none;
             height: auto;
             display: inline-block;
+            vertical-align: middle;
+            border-style: none;
             overflow-clip-margin: content-box;
             overflow: clip;
         }
 
-        .text-center {
-            text-align: center !important;
-        }
-
-        .pointer-heading {
-            font-size: 20px;
-            /* margin-bottom: 8px; */
-        }
-
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: #201c1d;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            clear: both;
-            font-weight: 700;
-            margin: 0 0 0.5407911001em;
-        }
-
-        .h1,
-        .h2,
-        .h3,
-        .h4,
-        .h5,
-        .h6,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            line-height: 1.2;
-        }
-
-        /* h5 {
-        display: block;
-        margin-block-start: 1.67em;
-        margin-block-end: 1.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        unicode-bidi: isolate;
-      } */
-        .text-center {
-            text-align: center !important;
-        }
-
-        .common-para {
-            font-size: 15px;
-        }
-
-        .common-para {
-            font-weight: 500;
-            color: #201c1d;
-        }
-
-        .mb-0,
-        .my-0 {
-            margin-bottom: 0 !important;
-        }
-
-        p {
-            margin: 0 0 1em;
-        }
-
-        p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            unicode-bidi: isolate;
-        }
-
-        .row .three-cards-inner:nth-child(2) {
-            border-left: 1px solid #f2f2f2;
-            border-right: 1px solid #f2f2f2;
-        }
-
-        .three-cards-inner {
-            padding: 20px 15px;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        @media (min-width: 768px) {
-            .col-md-4 {
-                -ms-flex: 0 0 33.333333%;
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%;
+        @media (max-width: 1200px) {
+            .outer-card-dv>.container {
+                max-width: 1140px;
             }
         }
 
-        .col,
-        .col-1,
-        .col-10,
-        .col-11,
-        .col-12,
-        .col-2,
-        .col-3,
-        .col-4,
-        .col-5,
-        .col-6,
-        .col-7,
-        .col-8,
-        .col-9,
-        .col-auto,
-        .col-lg,
-        .col-lg-1,
-        .col-lg-10,
-        .col-lg-11,
-        .col-lg-12,
-        .col-lg-2,
-        .col-lg-3,
-        .col-lg-4,
-        .col-lg-5,
-        .col-lg-6,
-        .col-lg-7,
-        .col-lg-8,
-        .col-lg-9,
-        .col-lg-auto,
-        .col-md,
-        .col-md-1,
-        .col-md-10,
-        .col-md-11,
-        .col-md-12,
-        .col-md-2,
-        .col-md-3,
-        .col-md-4,
-        .col-md-5,
-        .col-md-6,
-        .col-md-7,
-        .col-md-8,
-        .col-md-9,
-        .col-md-auto,
-        .col-sm,
-        .col-sm-1,
-        .col-sm-10,
-        .col-sm-11,
-        .col-sm-12,
-        .col-sm-2,
-        .col-sm-3,
-        .col-sm-4,
-        .col-sm-5,
-        .col-sm-6,
-        .col-sm-7,
-        .col-sm-8,
-        .col-sm-9,
-        .col-sm-auto,
-        .col-xl,
-        .col-xl-1,
-        .col-xl-10,
-        .col-xl-11,
-        .col-xl-12,
-        .col-xl-2,
-        .col-xl-3,
-        .col-xl-4,
-        .col-xl-5,
-        .col-xl-6,
-        .col-xl-7,
-        .col-xl-8,
-        .col-xl-9,
-        .col-xl-auto {
-            position: relative;
-            width: 100%;
+        @media (max-width: 992px) {
+            .outer-card-dv>.container {
+                max-width: 960px;
+            } 
+        }
+
+        @media (max-width: 767px) {
+
+            .outer-card-dv>.container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            .three-cards-inner {
+                flex: 0 0 33.333333%;
+                /* max-width: 33.333333%; */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .outer-card-dv>.container {
+                max-width: 540px;
+            }
         }
     </style>
+    <!--
     <section class="explore-menu common-sec">
         <div class="container">
             <div class="upper-heading">
@@ -1190,26 +789,6 @@
             width: 100%;
         }
 
-        /* @media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1140px;
-    }
-}
-@media (min-width: 992px) {
-    .container, .container-lg, .container-md, .container-sm {
-        max-width: 960px;
-    }
-}
-@media (min-width: 768px) {
-    .container, .container-md, .container-sm {
-        max-width: 720px;
-    }
-}
-@media (min-width: 576px) {
-    .container, .container-sm {
-        max-width: 540px;
-    }
-} */
         .container,
         .container-fluid,
         .container-lg,
@@ -1270,11 +849,6 @@
             padding: 1px 0px !important;
         }
 
-        /* @media (min-width: 768px) {
-    .mb-md-3, .my-md-3 {
-        margin-bottom: 1rem !important;
-    }
-} */
         .d-block {
             display: block !important;
         }
@@ -1338,14 +912,6 @@
             text-align: -webkit-match-parent;
         }
 
-        /* .explore-menu-ul {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding-top: 15px;
-} */
         ul {
             margin: 0px;
             list-style: none;
@@ -1503,7 +1069,7 @@
             transition: 0.7s;
             backface-visibility: hidden;
         }
-    </style> -->
+    </style>-->
 
 
     <script href="./script.js"></script>
