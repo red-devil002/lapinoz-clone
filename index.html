@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="hero-section">
+    <section class="hero-section">
         <!-- <div class="img">
             <img src="./Media/lapinoz-logo.png" alt="">
         </div> -->
@@ -69,18 +69,20 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <section class="deals-section">
         <h1>Deals and Offers</h1>
-        <article>
-            <img class="active" src="./Media/Offer1.jpeg" alt="">
-            <img src="./Media/Offer2.jpeg" alt="">
-            <img src="./Media/Offer3.jpeg" alt="">
-            <img src="./Media/Offer4.jpeg" alt="">
-            <img src="./Media/Offer5.jpeg" alt="">
-        </article>
+        <div class="deals-container">
+            <img class="deal" src="./Media/Offer3.jpeg" alt="">
+            <img class="deal" src="./Media/Offer2.jpeg" alt="">
+            <img class="deal" src="./Media/Offer3.jpeg" alt="">
+            <img class="deal" src="./Media/Offer4.jpeg" alt="">
+            <img class="deal" src="./Media/Offer5.jpeg" alt="">
+            <img class="deal" src="./Media/Offer6.jpg" alt="">
+            <img class="deal" src="./Media/offer7.jpg" alt="">
+        </div>
     </section>
 
     <section class="story">
@@ -141,7 +143,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 6%
+            border-radius: 6%;
         }
     </style>
 
@@ -1628,7 +1630,7 @@
             margin: 0 auto;
         }
 
-     .store-div-start {
+        .store-div-start {
             padding: 10px 12px;
         }
 
@@ -1727,17 +1729,12 @@
     </section>
 
     <style>
-        .single-banner-container {
+        /* .single-banner-container {
             max-width: 1250px;
             margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
+            padding: 10px 15px;
+            border-radius: 10px;
+        } */
 
         .banner-slide-nw a {
             display: block;
@@ -3538,7 +3535,260 @@
         }
     </style>
 
-    <script href="./script.js"></script>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="Useful-Links-section">
+                        <h6>Useful Links</h6>
+                        <ul class="anker-list">
+                            <li>
+                                <a href="https://lapinozpizza.in/shipping-policy">Shipping Policy</a>
+                            </li>
+                            <li>
+                                <a href="https://lapinozpizza.in/refund-policy">Refund Policy</a>
+                            </li>
+                            <li>
+                                <a href="https://lapinozpizza.in/terms-and-conditions">Terms &amp; Conditions</a>
+                            </li>
+                            <li>
+                                <a href="https://lapinozpizza.in/privacy-policy">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="https://lapinozpizza.in/promo-codes">Promo Codes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Payment-Methods-section">
+                        <h6>Payment Methods</h6>
+
+                        <ul class="payments-ul">
+                            <li>
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/cash-svg.svg"
+                                    alt="cash icon" />
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/mastercard-svg.svg"
+                                    alt="Master Card" />
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/gpay-svg.svg"
+                                    alt="Google Pay" />
+
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/paytm-svg.svg"
+                                    alt="Paytm" />
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/visa-svg.svg" alt="Visa" />
+                                <img src="https://lapinozpizza.in/assets/wla_new/img/footer/upi-icon.svg" alt="UPI" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Contact-Us-section">
+                        <div class="">
+                            <h6>Contact Us</h6>
+                            <ul class="anker-list">
+                                <li>
+                                    <span>Customer Support: </span>
+                                    <a class="d-inline d-md-block" href="mailto:support@lapinozpizza.in">
+                                        <svg id="Capa_1" style="
+                          enable-background: new 0 0 512 512;
+                          height: auto;
+                          width: 100%;
+                          max-width: 15px;
+                        " version="1.1" viewBox="0 0 512 512" x="0px" xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121    C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18    s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z     M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939    l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        support@lapinozpizza.in</a>
+                                </li>
+                                <li>
+                                    <span>Franchise Enquiry: </span>
+                                    <a class="d-inline d-md-block" href="mailto:info@lapinozpizza.in"><svg id="Capa_1"
+                                            style="
+                          enable-background: new 0 0 512 512;
+                          height: auto;
+                          width: 100%;
+                          max-width: 15px;
+                        " version="1.1" viewBox="0 0 512 512" x="0px" xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121    C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18    s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z     M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939    l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        info@lapinozpizza.in</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="Follow-Us">
+                        <div class="Follow-Us-section">
+                            <h6>Follow Us :</h6>
+                            <p>
+                                <a href="https://www.facebook.com/LaPinozPizzaIndia" target="_blank"><img
+                                        src="https://lapinozpizza.in/assets/wla_new/img/footer/facebook.svg"
+                                        alt="La Pino'z Pizza on facebook"></a></a>
+                                <a href="https://www.instagram.com/lapinozpizzaindia/" target="_blank"><img
+                                        src="https://lapinozpizza.in/assets/wla_new/img/footer/instagram.svg"
+                                        alt="La Pino'z Pizza on instagram"></a>
+                                <a href="https://www.youtube.com/c/LaPinozPizzaIndia/" target="_blank"><img
+                                        src="https://lapinozpizza.in/assets/wla_new/img/footer/youtube.svg"
+                                        alt="La Pino'z Pizza on youtube"></a>
+                                <a href="https://www.pinterest.com/LaPinozPizzaindia/" target="_blank"><img
+                                        src="https://lapinozpizza.in/assets/wla_new/img/footer/pinterest.svg"
+                                        alt="La Pino'z Pizza on pinterest"></a>
+                                <a href="https://twitter.com/LaPinozPizzaInd" target="_blank"><img
+                                        src="https://lapinozpizza.in/assets/wla_new/img/footer/twitter.svg"
+                                        alt="La Pino'z Pizza on twitter"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <div>
+                    <a href="https://www.uengage.in/" target="_blank">Powered By </a>
+                    <img src="https://www.uengage.in/assets/uen/img/ue-logo-2022.jpg" alt="Uengage Logo New" />
+                </div>
+
+                <div>
+                    <div class="c-icon">C</div>
+                    Copyright. All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .site-footer {
+            background-color: green;
+            color: rgb(255, 255, 255);
+            height: 100%;
+        }
+
+        .footer-top {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 1250px;
+            padding-inline: 15px;
+            /* padding-left: 15px; */
+            margin-inline: auto;
+            /* margin-left: auto; */
+
+        }
+
+        footer img {
+            width: 50px;
+            height: 30px;
+        }
+
+        .footer-row {
+            justify-content: space-between !important;
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: -15px;
+            /* margin-left: -15px; */
+        }
+
+        .Useful-Links-section {
+            max-width: 16.666667%;
+            padding-inline: 1rem;
+        }
+
+        footer h6 {
+            color: #fff;
+            font-size: 12px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .anker-list {
+            padding-top: 1rem !important;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        .anker-list li {
+            padding-bottom: 1rem !important;
+        }
+
+        .anker-list a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .payments-ul {
+            width: 200px;
+        }
+
+        .payments-ul img {
+            margin-bottom: 4px;
+        }
+
+        .Contact-Us-section li {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Contact-Us-section a {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-bottom-container {
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-bottom-container div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-bottom-container>p>img {
+            object-fit: contain;
+            height: 27px;
+            width: 120px;
+        }
+
+        .footer-bottom-container p a {
+            color: white;
+            padding-right: 5px;
+        }
+
+        .footer-bottom-container .c-icon {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: green;
+            color: white;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>

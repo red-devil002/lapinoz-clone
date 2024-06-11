@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+    color: #000;
+}
+
 .hero-section {
     background-color: #f0f0f0;
     /* font-family: ; */
@@ -101,11 +106,9 @@ nav ul {
     /* Adjust as needed */
 }
 
-/* Optional: Responsive Breakpoint Styles (if applicable) */
 @media (min-width: 768px) {
     .custom-class {
         margin-top: 0px;
-        /* Adjust as needed for larger screens */
     }
 }
 
@@ -166,7 +169,7 @@ select {
     font-weight: bold;
 }
 
-article {
+/* article {
     margin: 70px 10px;
     position: relative;
     overflow: hidden;
@@ -190,68 +193,70 @@ article .active {
 }
 
 article img {
-    position: absolute;
+    position: relative;
     z-index: 0;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     height: 150%;
     filter: grayscale(0.6);
-}
-
-/* 
-.story {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.story>.story-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-}
-
-.story>.owner {
-    position: relative;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.story>.story-content>.story-content-upper {
-    font-size: 26px;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.story>.story-content>.story-content-lower {
-    margin-top: 2rem;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.story>.story-content>.story-content-upper h5 {
-    color: #556b2f;
-
-}
-
-.story>.owner>.owner-img {
-    position: relative;
-    height: 28rem;
-    width: 28rem;
-    border-radius: 50%;
 } */
+
+.deals-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    /* overflow-y: hidden; */
+    margin: 10px 0;
+}
+
+
+.deals-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: hidden;
+    width: 95%;
+    border-radius: 5px;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    padding-bottom: 5px;
+}
+
+.deal {
+    position: relative;
+    flex: 0 0;
+    width: 10%;
+    border-radius: 10%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .75s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0), 0 2px 4px -2px rgb(0 0 0);
+}
+
+.deal:hover {
+    width: 100%;
+    transition: all .75s ease-in-out;
+    border-radius: 5px;
+}
+
+@media (max-width: 760px) {
+
+    .deals-container {
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .deal {
+        object-fit: contain;
+        width: 60%;
+
+    }
+}
 
 .story {
     position: relative;
@@ -315,4 +320,28 @@ article img {
     .story {
         flex-direction: row;
     }
+}
+
+
+/* Animations */
+section {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+p {
+    transform: translate(-60px);
+    transition: all 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0px);
+    transition: all 1s ease-in-out;
+}
+
+.hide {
+    /* transform: translate(-40px); */
+    opacity: 0;
+    transition: all 1s ease-in-out;
 }
