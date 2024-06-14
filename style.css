@@ -11,7 +11,7 @@
     padding: 10px 10px;
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: center;
     height: 100dvh;
     background-image: url(./Media/home-background.jpeg);
     background-size: cover;
