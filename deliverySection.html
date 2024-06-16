@@ -199,7 +199,7 @@
   </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -480,6 +480,261 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="quality-section">
+    <div class="quality-container">
+        <h3 class="quality-container-heading">
+            Quality Assured
+        </h3>
+        <div class="bottom-dots">
+            <span class="dot line-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+<style>
+    .quality-section {
+        position: relative;
+        background-image: url(https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/usp-banner.jpg);
+        padding: 30px 0 140px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .quality-section:before {
+        content: "";
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .quality-container {
+        position: relative;
+        max-width: 1250px;
+        width: 100%;
+    }
+
+    .quality-container-heading {
+        font-size: 26px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .bottom-dots {
+        justify-content: center;
+        display: flex;
+    }
+
+    .bottom-dots .dot.line-dot {
+        border-right: 40px solid white;
+    }
+
+    .bottom-dots .dot {
+        position: relative;
+        display: block;
+        float: left;
+        width: 3px;
+        height: 2px;
+        border-right: 3px solid white;
+        margin-right: 3px;
+    }
+
+    @media (min-width: 1200px) {
+
+        .quality-container {
+            max-width: 1140px;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        .quality-container {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .bottom-dots {
+            margin-bottom: 1.5rem;
+        }
+
+        .quality-container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 576px) {
+
+        .quality-container {
+            max-width: 540px;
+        }
+    }
+
+    .quality-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .common-heading {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 0 0 .5407911001em;
+    }
+
+    .clearfix::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+</style>
+
+<section class="outer-card-dv">
+    <div class="container">
+        <div class="three-cards">
+            <div class="three-cards-container">
+                <div class="three-cards-inner ">
+                    <div class="icons">
+                        <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/ingrediants.svg"
+                            class="img-responsive" alt="Ingrediants" />
+                    </div>
+                    <h5 class="pointer-heading">Finest Ingredients</h5>
+                    <p class="common-para">
+                        Made from the finest quality ingredients, to give you an
+                        authentic Italian taste, every single time.
+                    </p>
+                </div>
+                <div class="three-cards-inner">
+                    <div class="icons">
+                        <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/fresh-dough.svg"
+                            class="img-responsive" alt="Fresh Dough" />
+                    </div>
+                    <h5 class="pointer-heading">Fresh Dough</h5>
+                    <p class="common-para">
+                        Our pizza dough is mixed on demand, so that pizza served to you
+                        is always hot and fresh.
+                    </p>
+                </div>
+                <div class="three-cards-inner ">
+                    <div class="icons">
+                        <img src="https://lapinoz.ca/assets/wla_new/lapinoz/ca/images/safety-and-quality.svg"
+                            class="img-responsive" alt="Safety And Quality" />
+                    </div>
+                    <h5 class="pointer-heading">Safety and Quality Standards</h5>
+                    <p class="common-para">
+                        Our kitchens follow the highest safety and quality standards,
+                        which are fully compliant with fssai guidelines.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .outer-card-dv {
+        position: relative;
+        margin-top: -125px;
+        padding-bottom: 1rem;
+        display: block;
+    }
+
+    .outer-card-dv>.container {
+        max-width: 1250px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .three-cards {
+        background-color: #fff;
+        width: 100%;
+        padding: 0px 20px;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 0px 4px 7px rgb(0 0 0 / 10%);
+    }
+
+    .three-cards-container {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .three-cards-inner {
+        padding: 20px 15px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+
+    }
+
+    .icons>.img-responsive {
+        width: 100%;
+        max-width: 65px;
+        margin-bottom: 15px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        border-style: none;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+
+    @media (max-width: 1200px) {
+        .outer-card-dv>.container {
+            max-width: 1140px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .outer-card-dv>.container {
+            max-width: 960px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .outer-card-dv>.container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .three-cards-inner {
+            flex: 0 0 33.333333%;
+            /* max-width: 33.333333%; */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .outer-card-dv>.container {
+            max-width: 540px;
+        }
+    }
+</style>
+</body>
 </html>
-
-
