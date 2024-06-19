@@ -1526,9 +1526,9 @@
         observer.observe(item);
     });
 });
-
     </script>
 
+    <!-- Best seller section -->
     <section class="bestseller-section">
         <div class="bestseller-heading">
             <div class="">
@@ -1543,6 +1543,21 @@
         </div>
         <div class="bestseller-container">
             <div class="bestseller-slider">
+                <div class="item-outer" style="visibility: hidden;">
+                    <a href="https://lapinozpizza.in/online-order">
+                        <div class="item-placeholder">
+                            <img src="https://static.uengage.in/uploads/5/image-711224-1715596629.png"
+                                alt="Farm Villa Pizza">
+                            <div class="veg-flag"><span></span></div>
+                        </div>
+                        <div class="item-details">
+                            <span class="recommended"><i class="las la-star"></i> Recommended</span>
+                            <h4 class="item-title">Farm Villa Pizza</h4>
+                            <p class="heading-customize mb-0">The freshness of capsicum, tomatoes...</p>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="item-outer">
                     <a href="https://lapinozpizza.in/online-order">
                         <div class="item-placeholder">
@@ -1594,7 +1609,7 @@
                                     <h4 class="item-title">Cheezy-7 Pizza</h4>
                                 </div>
                             </div>
-                            <p class="heading-customize mb-0">An Exotic Combination of White Mozz...</p>
+                            <p class="heading-customize mb-0">Exotic Combination of White Mozz...</p>
                         </a>
                     </div>
                 </div>
@@ -1622,7 +1637,7 @@
                                     <h4 class="item-title">Cheese Lover Pizza</h4>
                                 </div>
                             </div>
-                            <p class="heading-customize mb-0">Cheese Dip, Jalapenos Dip, Onion Ca...</p>
+                            <p class="heading-customize mb-0">Cheese Dip, Jalapenos Dip, Onion...</p>
                         </a>
                     </div>
                 </div>
@@ -1681,19 +1696,47 @@
                         </a>
                     </div>
                 </div>
+                <div class="item-outer" style="visibility: hidden;">
+                    <a href="https://lapinozpizza.in/online-order" tabindex="-1">
+                        <div class="item-placeholder">
+                            <img src="https://static.uengage.in/uploads/5/image-191979-1715686806.png"
+                                alt="Bestseller Placeholder" class="bestseller-placeholder">
+                            <!-- <p class="item-analytics"><img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/up-arrow.png" alt="up-arrow"> 500+ people have ordered this recently</p> -->
+
+                            <div class="veg-flag">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="item-details">
+                        <a href="https://lapinozpizza.in/online-order" tabindex="-1">
+                            <span class="recommended">
+                                <i class="las la-star"></i> Recommended</span>
+                            <div class="item-heading">
+                                <div>
+                                    <div class="flag"><span></span></div>
+                                </div>
+                                <div>
+                                    <h4 class="item-title">Onions Pizza</h4>
+                                </div>
+                            </div>
+                            <p class="heading-customize mb-0">Onions on a cheesy base with in hou...</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <style>
         .bestseller-section {
-            padding: 25px 0;
+            padding-block: 5px;
             display: block;
             background-color: #f0f0f0;
         }
 
         .bestseller-heading .bottom-dots {
-            padding: 0 1px;
+            padding-inline:1px;
         }
 
         .bestseller-heading .bottom-dots .dots {
@@ -1719,14 +1762,16 @@
         .bestseller-container {
             padding-right: 15px;
             padding-left: 15px;
-            max-width: 1270px;
-            margin: 0 auto;
+            max-width: 1300px;
+            margin-inline:auto;
+            /* border: 1px solid black; */
+
         }
 
         .bestseller-slider {
             margin-bottom: 20px;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: flex-start;
             align-items: center;
             overflow-x: auto;
@@ -1743,10 +1788,17 @@
             border-radius: 10px;
             flex: 0 0 auto;
             width: 300px;
-            height: fit-content;
+            height: 280px;
             scroll-snap-align: start;
-            box-shadow: 2rem gray;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.489);
+            transition:transform 1.0s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-outer.scaled {
+            transform: scale(1);
+            height: 200px;
         }
 
         .item-placeholder {
@@ -1761,10 +1813,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.6s ease-out;
+        }
+
+        .item-outer.scaled .item-placeholder img {
+            transform: scale(1.2); /* Scale up the image for divs with scale 0.7 */
         }
 
         .item-placeholder img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
             transition: all 1s ease;
         }
 
@@ -1781,7 +1838,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .veg-flag span {
@@ -1802,7 +1858,8 @@
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-
+            opacity: 1;
+            transition: opacity 1.0s ease-out, visibility 1.0s ease-out;
         }
 
         .recommended {
@@ -1821,8 +1878,8 @@
                 width: 250px;
             }
 
-            .item-placeholder {
-                height: 150px;
+            .item-outer.scaled {
+                height: 200px;
             }
         }
 
@@ -1830,15 +1887,40 @@
             .item-outer {
                 width: 300px;
             }
-
-            .item-placeholder {
-                height: 120px;
-            }
         }
     </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.item-outer');
+        const slider = document.querySelector('.bestseller-slider');
+
+        function updateItemStyles() {
+            const sliderRect = slider.getBoundingClientRect();
+            const sectionWidth = sliderRect.width;
+            const partWidth = sectionWidth / 3;
+            const centerStart = sliderRect.left + partWidth;
+            const centerEnd = sliderRect.left + (2 * partWidth);
+
+            items.forEach((item, index) => {
+                const itemRect = item.getBoundingClientRect();
+                const itemCenter = (itemRect.left + itemRect.right) / 2;
+
+                if (itemCenter >= centerStart && itemCenter <= centerEnd) {
+                    item.classList.remove('scaled');
+                } else {
+                    item.classList.add('scaled');
+                }
+            });
+        }
+
+        slider.addEventListener('scroll', updateItemStyles);
+
+        // Initial call to set the correct scaling
+        updateItemStyles();
+    });
+    </script>
 
     <!-- Newly Launched Stores -->
-
     <section class="newly-launched">
         <div class="newly-launched-container">
             <div class="newly-launched-upper-heading">
@@ -2098,8 +2180,8 @@
 
         .newly-launched-carts {
             padding-inline: 15px;
-            max-width: 1270px;
-            margin: 0 auto;
+            max-width: 1100px;
+            margin-inline: auto;
         }
 
         .store-div-start {
@@ -2109,16 +2191,35 @@
         .newly-launched-slick-track {
             display: flex;
             overflow-x: scroll;
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        /* For Webkit browsers (Chrome, Safari) */
+        .newly-launched-slick-track::-webkit-scrollbar {
+            height: 0px; 
         }
 
         .store-div {
             border: 1px solid #efefef;
             border-radius: 12px;
             box-shadow: 0px 4px 7px rgb(0 0 0 / 10%);
-            background-color: #fff;
+            background-color: #efefef;
             height: fit-content;
             display: flex;
             flex-direction: column;
+            transition: transform 0.5s ease-out;
+        }
+
+        .store-div[data-scale="0.8"] {
+            transform: scale(0.85);
+        }
+
+        .store-div[data-scale="0.9"] {
+            transform: scale(0.95);
+        }
+
+        .store-div[data-scale="1.0"] {
+            transform: scale(1.05);
         }
 
         .store-div-top {
@@ -2142,45 +2243,42 @@
         /* .slick-slide img {
       display: block;
     } */
-
-        /* Custom styles for slick arrows */
-        .slick-prev,
-        .slick-next {
-            background: green;
-            color: #fff;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            cursor: pointer;
-        }
-
-        .slick-prev {
-            left: 10px;
-        }
-
-        .slick-next {
-            right: 10px;
-        }
-
-        .slick-prev:hover,
-        .slick-next:hover {
-            background: green;
-        }
-
-        .slick-prev:focus,
-        .slick-next:focus {
-            outline: none;
-            background: green;
-        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.store-div');
+        const slider = document.querySelector('.newly-launched-slick-track');
 
+        function updateItemStyles() {
+            const sliderRect = slider.getBoundingClientRect();
+            const sectionWidth = sliderRect.width;
+            const partWidth = sectionWidth / 5;
+            
+            items.forEach((item, index) => {
+                const itemRect = item.getBoundingClientRect();
+                const itemCenter = (itemRect.left + itemRect.right) / 2;
+
+                if (itemCenter < sliderRect.left + partWidth) {
+                    item.setAttribute('data-scale', '0.8');
+                } else if (itemCenter < sliderRect.left + 2 * partWidth) {
+                    item.setAttribute('data-scale', '0.9');
+                } else if (itemCenter < sliderRect.left + 3 * partWidth) {
+                    item.setAttribute('data-scale', '1.0');
+                } else if (itemCenter < sliderRect.left + 4 * partWidth) {
+                    item.setAttribute('data-scale', '0.9');
+                } else {
+                    item.setAttribute('data-scale', '0.8');
+                }
+            });
+        }
+
+        slider.addEventListener('scroll', updateItemStyles);
+
+        // Initial call to set the correct scaling
+        updateItemStyles();
+    });
+
+    </script>
 
 
     <section class="single-banner">
