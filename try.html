@@ -283,371 +283,352 @@
   </body>
 </html> -->
 
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-    <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-  
-    <!-- Custom CSS for the page -->
-    <style>
-      .newly-launched {
-        padding: 25px 0;
-      }
-  
-      .newly-launched-container {
-        width: 100%;
-        max-width: 1250px;
-      }
-  
-      .newly-launched-heading {
-        font-size: 26px;
-        font-weight: 600;
-      }
-
-      .lapinoz-logo-icon{
-        width: 150px;
-        height: 150px;
-      }
-      
-      .bottom-dots {
-        padding: 1px 0 !important;
-      }
-  
-      .bottom-dots .dot.line-dot {
-        color: green;
-      }
-  
-      .bottom-dots .dot.line-dot, .heading-dots .h-dot.line-dot {
-        border-right: 40px solid green;
-      }
-  
-      .bottom-dots .dot {
-        float: left;
-        width: 3px;
-        height: 2px;
-        margin-right: 3px;
-      }
-  
-      .bottom-dots .dot {
-        border-right: 3px solid green;
-      }
-  
-      .newly-launched-carts {
-        padding-inline: 15px;
-        max-width: 1270px;
-        margin: 0 auto;
-      }
-  
-      /* .slick-slider {
-        margin-bottom: 20px;
-        position: relative;
-        display: block;
-      } */
-  
-      /* .slick-list {
-        padding: 0 20% 0 0 !important;
-        overflow: hidden;
-      } */
-  
-      /* .slick-initialized .slick-slide {
-        display: block;
-      } */
-      
-      .store-div-start {
-        padding: 10px 12px;
-      }
-  
-      /* .slick-slide {
-        width: 200px;
-        float: left;
-      } */
-  
-      .store-div {
-        border: 1px solid #EFEFEF;
-        border-radius: 12px;
-        box-shadow: 0px 4px 7px rgb(0 0 0 / 10%);
-        background-color: #fff;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .store-div-top {
-        padding: 20px 20px;
-      }
-  
-      .store-div-bottom {
-        padding: 20px 20px;
-        border-radius: 12px;
-        background: linear-gradient(left, #a0d8ba 0%, #3f9366 100%);
-        position: relative;
-      }
-  
-      .phone-icn img {
-        width: 100%;
-        max-width: 16px;
-        margin: 0 auto;
-        margin-top: 10px;
-      }
-  
-      /* .slick-slide img {
-        display: block;
-      } */
-  
-      /* Custom styles for slick arrows */
-      .slick-prev, .slick-next {
-      background: green;
-      color: #fff;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
-      cursor: pointer;
-    }
-
-    .slick-prev {
-      left: 10px;
-    }
-
-    .slick-next {
-      right: 10px;
-    }
-
-    .slick-prev:hover, .slick-next:hover {
-      background: green;
-    }
-
-    .slick-prev:focus, .slick-next:focus {
-      outline: none;
-      background: green;
-    }
-    </style> -->
-  
 </head>
 <body>
-  <section class="newly-launched need-arrows tp-spacing">
-    <div class="newly-launched-container">
-      <div class="newly-launched-upper-heading">
-        <h3 class="newly-launched-heading">Newly Launched Stores</h3>
-        <div class="bottom-dots clearfix">
-          <span class="dot line-dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </div>
-    </div>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-    <div class="newly-launched-carts">
-      <div class="newly-launched-slider">
-        <!-- Slick Slider Content -->
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outerdiv {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+        .newly-launched-carts {
+            padding-right: 15px;
+            padding-left: 15px;
+            max-width: 1270px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1250px;
+            height: 50%;
+        }
+
+        .newly-launched-slider {
+            margin-bottom: 20px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .newly-launched-slick-track {
+            height: 100%;
+            /* width: 90%; */
+            background-color: aqua;
+            /* margin: auto; */
+            /* position: relative;
+            top: 0;
+            left: 0; */
+            display: flex;
+            margin-inline: auto;
+            overflow-x: scroll;
+            gap: 5px;
+            scrollbar-width: none;
+        }
+        
+        /* For Webkit browsers (Chrome, Safari) */
+        .newly-launched-slick-track::-webkit-scrollbar {
+            height: 0px;
+        }
+
+        .store-div-start {
+            height: 50%;
+            padding: 10px 12px;
+        }
+
+        .store-div {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 250px;
+            position: relative;
+            border: 1px solid #efefef;
+            border-radius: 12px;
+            box-shadow: 0px 4px 7px rgb(0 0 0);
+            background-color: #efefef;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.5s ease-out;
+        }
+
+        .store-div[data-scale="0.8"] {
+            transform: scale(0.85);
+        }
+
+        .store-div[data-scale="0.9"] {
+            transform: scale(0.95);
+        }
+
+        .store-div[data-scale="1.0"] {
+            transform: scale(1.05);
+        }
+
+        .store-div-top {
+            padding: 20px 20px;
+            color: green;
+        }
+
+        .store-div-top a {
+            color: green;
+            text-decoration: none;
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-div-bottom {
+            width: 100%;
+            height: 100%;
+            /* padding: 20px 20px; */
+            border-radius: 12px;
+            background: linear-gradient(to right, rgba(0, 128, 0, 0.150), green);
+            /* background: linear-gradient(#fff 0%, #3f9366 100%); */
+            position: absolute;
+            /* top: 50%; */
+            transform: translateY(50%);
+            z-index: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .store-div-bottom-left {
+            position: relative;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 20px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .phone-icn img {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            max-width: 16px;
+        }
+
+        .phone-icn {
+            position: absolute;
+            background-color: white;
+            top: 40%;
+            right: 10%;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .lapinoz-logo-icon {
+            width: 35px;
+            height: 35 px;
+        }
+
+        .store-detail span {
+            text-decoration: none;
+            color: white;
+        }
+
+        .store-div:hover .store-div-bottom {
+            transform: translateY(0);
+        }
+
+        .store-div:hover .phone-icn {
+            top: 10%;
+            rotate: 360deg;
+            /* transform: rotate(360deg); */
+        }
+
+        .store-div:hover .store-div-top a {
+            color: white;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+            z-index: 10000;
+        }
+</style>
+  <div class="newly-launched-carts">
+    <div class="newly-launched-slider">
         <div class="newly-launched-slick-track">
-          <div class="store-div-start">
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <!-- Add other store-div-start elements similarly -->
-          <div class="store-div-start">
+
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <div class="store-div-start">
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <div class="store-div-start">
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <div class="store-div-start">
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <div class="store-div-start">
             <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
+                <div class="store-div-top">
+                    <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                        <h4 class="store-div-heading">Nainital Road</h4>
+                        <p class="store-div-para">Haldwani</p>
+                    </a>
+                </div>
+                <div class="store-div-bottom">
+                </div>
+                <a class="store-div-bottom-left" href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
+                    <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
+                    <div class="store-detail">
+                        <span>La Pino'z Pizza</span>
+                        <!-- <span  ><i class="fas fa-angle-right"></i></span> -->
+                    </div>
                 </a>
                 <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
+                    <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
                 </a>
-              </div>
             </div>
-          </div>
-          <div class="store-div-start">
-            <div class="store-div">
-              <div class="store-div-top">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <h4 class="store-div-heading">Nainital Road</h4>
-                  <p class="store-div-para">Haldwani</p>
-                </a>
-              </div>
-              <div class="store-div-bottom">
-                <a href="https://lapinozpizza.in/order/lapinoz-nainital-road-haldwani">
-                  <img src="https://www.uengage.in/images/addo/logos/logo-5-1600769708.png" alt="Lapinoz Logo Icon" class="lapinoz-logo-icon">
-                  <div class="store-detail">
-                    <span>La Pino'z Pizza</span>
-                    <span><i class="fas fa-angle-right"></i></span>
-                  </div>
-                </a>
-                <a href="tel:9528879671" class="phone-icn">
-                  <img src="https://lapinozpizza.in/assets/wla_new/lapinoz/img/new/phone-icn.png" alt="Phone Icn">
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-
-        <!-- Navigation Buttons -->
-        <button class="slick-prev slick-arrow" aria-label="Previous">Prev</button>
-        <button class="slick-next slick-arrow" aria-label="Next">Next</button>
-      </div>
     </div>
-  </section>
+</div>
 
-  <!-- Slick JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const items = document.querySelectorAll('.store-div');
+      const slider = document.querySelector('.newly-launched-slick-track');
 
-  <script>
-    $(document).ready(function(){
-      $('.newly-launched-slider .newly-launched-slick-track').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        prevArrow: $('.slick-prev'),
-        nextArrow: $('.slick-next'),
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
-          }
-        ]
-      });
-    });
-  </script>
+      function updateItemStyles() {
+          const sliderRect = slider.getBoundingClientRect();
+          const sectionWidth = sliderRect.width;
+          const partWidth = sectionWidth / 5;
+
+          items.forEach((item, index) => {
+              const itemRect = item.getBoundingClientRect();
+              const itemCenter = (itemRect.left + itemRect.right) / 2;
+
+              if (itemCenter < sliderRect.left + partWidth) {
+                  item.setAttribute('data-scale', '0.8');
+              } else if (itemCenter < sliderRect.left + 2 * partWidth) {
+                  item.setAttribute('data-scale', '0.9');
+              } else if (itemCenter < sliderRect.left + 3 * partWidth) {
+                  item.setAttribute('data-scale', '1.0');
+              } else if (itemCenter < sliderRect.left + 4 * partWidth) {
+                  item.setAttribute('data-scale', '0.9');
+              } else {
+                  item.setAttribute('data-scale', '0.8');
+              }
+          });
+      }
+
+      slider.addEventListener('scroll', updateItemStyles);
+
+      // Initial call to set the correct scaling
+      updateItemStyles();
+  });
+</script>
+
 </body>
-
 </html>
